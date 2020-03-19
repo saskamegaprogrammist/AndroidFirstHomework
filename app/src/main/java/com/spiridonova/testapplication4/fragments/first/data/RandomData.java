@@ -42,4 +42,8 @@ public class RandomData {
         return selfInstance;
     }
 
+    public void setData(ArrayList<NumColor> dataList) {
+        this.dataList = dataList;
+    }
+
 }

@@ -22,13 +22,14 @@ public class DataAdapterFirst extends RecyclerView.Adapter<ViewHolderFirst> {
     private ArrayList<NumColor> numColors;
     private FirstFragment fragment;
 
-    public DataAdapterFirst(Fragment fragment) {
+    public DataAdapterFirst(Fragment fragment, ArrayList<NumColor> data) {
         this.fragment = (FirstFragment)fragment;
-        this.numColors = RandomData.getInstance().getData();
+        this.numColors = data;
     }
 
     public void incrementNumbers() {
         RandomData.getInstance().increment();
+        this.numColors = RandomData.getInstance().getData();
     }
 
     @NonNull
